@@ -9,10 +9,26 @@
     <h1> Intimo </h1>
     <div>
       <button onclick = "userStartAudio()"> Listen </button>
+      <button onclick = "muteAudio()"> Mute </button>
+      <button onclick = "unMuteAudio()"> Unmute </button>
+      <!-- <button onlick = "" -->
       <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload=""></audio>
     </div>
 
     <script>
+        const liveStream = document.getElementById('player');
+        liveStream.muted = false;
+
+
+        function muteAudio() {
+          liveStream.muted = true;
+          console.log("muted");
+        } 
+
+        function unMuteAudio() {
+          liveStream.muted = false;
+        }
+
     </script>
 
 
