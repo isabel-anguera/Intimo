@@ -32,6 +32,16 @@ button {
 	text-align: center;
 }
 
+h2 {
+	color: white;
+	font-family: "GT-Sectra";
+	font-size: 42px;
+	margin-bottom: 0;
+	margin-left: 10%;
+	margin-top: 5%;
+	text-align: left;
+}
+
 h4 {
 	margin: 0;
 	color: #ffffffd9;
@@ -53,8 +63,7 @@ a {
 
 #top-bar {
 	width: 80%;
-	margin-top: 5%;
-
+	margin-top: 0;
 }
 
 button:hover {
@@ -92,7 +101,7 @@ button:hover {
 }
 
 #addButton {
-	margin: 1% 1% 0 95%;
+	margin: 1% 2% 0 95%;
 }
 
 
