@@ -6,33 +6,105 @@
   </head>
   <body>
 
-    <h1> Intimo </h1>
-    <div>
-      <button onclick = "userStartAudio()"> Listen </button>
-      <button onclick = "muteAudio()"> Mute </button>
-      <button onclick = "unMuteAudio()"> Unmute </button>
-      <!-- <button onlick = "" -->
-      <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload=""></audio>
+    <h1> Intimo Radio </h1>
+
+    <div id = "liveStreamControls">
+      <button id = "startButton" onclick = "userStartAudio()"> ▷ </button>
+      <button id = "muteButton" onclick = "muteAudio()"> ○ </button>
+      <button id = "unMuteButton" onclick = "unMuteAudio()"> ◎ </button>
     </div>
 
-    <script>
-        const liveStream = document.getElementById('player');
-        liveStream.muted = false;
+      <hr id = "top-bar">
 
+      <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload></audio>
 
-        function muteAudio() {
-          liveStream.muted = true;
-          console.log("muted");
-        } 
+      <div id = "archive">
 
-        function unMuteAudio() {
-          liveStream.muted = false;
-        }
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile1()">►</button>
+          <button onclick = "pauseFile1()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Anthony_1.mp3" id = "file1" preload>
+        </div>
 
-    </script>
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile2()">►</button>
+          <button onclick = "pauseFile2()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Imagine_1.mp3" id = "file2" preload>
+        </div>
+
+        <div id="archive-file" style = "border: none;">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile3()">►</button>
+          <button onclick = "pauseFile3()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/January_1.mp3" id = "file3" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile4()">►</button>
+          <button onclick = "pauseFile4()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Madonna_1.mp3" id = "file4" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile5()">►</button>
+          <button onclick = "pauseFile5()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/nostalgic-tones.m4a" id = "file5" preload>
+        </div>
+
+        <div id="archive-file" style = "border: none;">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile6()">►</button>
+          <button onclick = "pauseFile6()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Sam_1.mp3" id = "file6" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile7()">►</button>
+          <button onclick = "pauseFile7()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Steve_1.mp3" id = "file7" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile8()">►</button>
+          <button onclick = "pauseFile8()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Toast_1.mp3" id = "file8" preload>
+        </div>
+      </div>
+
 
 
     <!-- <script src="js/sketch2.js"></script> -->
+    <script src = "js/landingJS.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
   </body>
