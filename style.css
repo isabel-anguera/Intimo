@@ -5,13 +5,15 @@
   font-family: "GT-America";
   src: url("Assets/GT-America-Standard-Regular.woff2");
 }
-
+html {
+	color: black;
+}
 
 body {
 	font-family: "GT-America";
-	background: rgba(0,0,0);
-	background: linear-gradient(90deg, rgba(172,33,33,1) 0%, rgba(207,42,79,1) 29%, rgba(247,127,100,1) 73%, rgba(255,92,67,1) 100%);
+	background: rgba(255);
 	text-align: center;
+	color: black;
 }
 
 h1 {
@@ -19,21 +21,19 @@ h1 {
 	margin-top: 1%;
 	margin-bottom: 2%;
 	text-align: center;
-	color: white;
 	font-family: "GT-Sectra";
 }
 
 button {
 	font-size: 32px;
 	background-color: #ffffff00;
-	color: white;
 	border: none;
 	margin-top: 0;
 	text-align: center;
+	color: black;
 }
 
 h2 {
-	color: white;
 	font-family: "GT-Sectra";
 	font-size: 42px;
 	margin-bottom: 0;
@@ -44,19 +44,18 @@ h2 {
 
 h4 {
 	margin: 0;
-	color: #ffffffd9;
 	font-size: 28px;
 	font-family: "GT-Sectra";
 }
 
 h5 {
-	color: #ffffffd9;
+
 	font-size: 18px;
 	margin: 2%;
 }
 
 a {
-	color: white;
+
 	text-decoration: none;
 }
 
@@ -64,30 +63,31 @@ a {
 #top-bar {
 	width: 80%;
 	margin-top: 0;
+	border-color: black;
 }
 
 button:hover {
-	background-color: #cf2a4f;
+	background-color: white;
 }
 
 #archive {
 	margin: 5% 10% 5% 10%;
 	display: grid;
   	grid-template-columns: auto auto auto;
-  	color: black;
+
 
 }
 
 #archive-file {
 	padding: 10%;
-	border-right: solid #ffffffd9 2px;
+	border-right: solid black 2px;
 	margin: 0;
 	text-align: left;
 
 }
 
 #liveStreamControls {
-	border: solid #ffffffd9 2px;
+	border: solid black 2px;
 	text-align: center;
 	max-width: 200px;
 	padding: .5%;
@@ -98,10 +98,12 @@ button:hover {
 #grid-id {
 	width: 100%;
 	margin-top: 8%;
+	border-color: black;
 }
 
 #addButton {
 	margin: 1% 2% 0 95%;
+	color: black;
 }
 
 

@@ -1,0 +1,156 @@
+ var canvas;
+
+        var url;
+
+        const apiKey = "3f56d66bf44e9bbf90cbf9c5a0db23a5";
+        let zipCode = 90001;
+
+        let weather;
+
+        let xPos, xPos2, xPos3, xPos4, xPos5;
+        let yPos, yPos2, yPos3, yPos4, yPos5;
+        const orbSize = 1000;
+
+        let h;
+        let s;
+
+    
+        function setup() {
+            canvas = createCanvas(windowWidth, windowHeight);
+            canvas.position(0, 0);
+            canvas.style('z-index', '-1');
+            colorMode(HSB);
+            noStroke();
+  
+            url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode +",us&appid=" + apiKey + "&units=metric";
+            loadJSON(url, gotData);
+
+            xPos = random(250, windowWidth-250);
+        	yPos = random(250, windowHeight-250);
+
+        	xPos2 = random(250, windowWidth-250);
+        	yPos2 = random(250, windowHeight-250);
+
+        	xPos3 = random(250, windowWidth-250);
+        	yPos3 = random(250, windowHeight-250);
+
+        	xPos4 = random(250, windowWidth-250);
+        	yPos4 = random(250, windowHeight-250);
+
+        	xPos5 = random(250, windowWidth-250);
+        	yPos5 = random(250, windowHeight-250);
+
+
+        }
+
+        function gotData(data) {
+
+            weather = data;
+        }
+
+
+        function draw() {
+            // background(h+5, s, 100);
+
+
+    //ORBS           
+            fill(h, s, 100);
+            ellipse(xPos, yPos, orbSize, orbSize);
+
+            fill(h+10, s, 100);
+            ellipse(xPos2, yPos2, orbSize, orbSize);
+
+            fill(h+20, s, 100);
+            ellipse(xPos3, yPos3, orbSize, orbSize);
+
+            fill(h-10, s, 100);
+            ellipse(xPos4, yPos4, orbSize, orbSize);
+
+            fill(h-20, s, 100);
+            ellipse(xPos5, yPos5, orbSize, orbSize);
+
+    //USING JSON DATA
+
+            if(weather) { 
+
+            	let speed = weather.wind.speed/5;
+                let temp = weather.main.temp;
+                let humidity = weather.main.humidity;
+
+    //TYING DATA TO HUE AND SATURATION
+
+                h = map(temp, -10, 60, 0, 360);
+                s = map(humidity, 100, 0, 30, 90);
+
+
+    // IF MOVING OFF SCREEN
+
+        // XPOS + YPOS +
+
+            	if(xPos >= windowWidth + orbSize/2) {
+            		xPos = -orbSize/2;
+            	}
+
+            	if(yPos >= windowHeight + orbSize/2) {
+            		yPos = -orbSize/2;
+            	}
+
+        // XPOS - YPOS -
+
+                if(xPos2 <= -orbSize/2) {
+                    xPos2 = windowWidth + orbSize/2;
+                }
+
+                if(yPos2 <= -orbSize/2) {
+                    yPos2 = windowHeight + orbSize/2;
+                }
+
+        // XPOS + YPOS -
+
+                if( xPos3 >= windowWidth + orbSize/2) {
+                    xPos3 = -orbSize/2;
+                }
+
+                if(yPos3 <= -orbSize/2) {
+                    yPos3 = windowHeight + orbSize/2;
+                }
+
+        // XPOS - YPOS +
+
+                if(xPos4 <= -orbSize/2) {
+                    xPos4 = windowWidth + orbSize/2;
+                }
+
+                if(yPos4 >= windowHeight + orbSize/2) {
+                    yPos4 = -orbSize/2;
+                }
+
+        // XPOS + YPOS +
+
+                if(xPos5 >= windowWidth + orbSize/2) {
+                    xPos5 = -orbSize/2;
+                }
+
+                if(yPos5 >= windowHeight + orbSize/2) {
+                    yPos5 = -orbSize/2;
+                }
+
+
+            xPos += speed;
+            yPos += speed;
+
+            xPos2 -= speed;
+            yPos2 -= speed;
+
+            xPos3 += speed;
+            yPos3 -= speed;
+
+            xPos4 -= speed;
+            yPos4 += speed;
+
+            xPos5 += speed;
+            yPos5 += speed;
+         	
+        }
+
+    }
