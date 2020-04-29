@@ -1,9 +1,14 @@
- var canvas;
+        
+        var canvas;
+
+        // let input = document.getElementById("text-box");
+        // var zipCode = document.getElementById("text-box").value;
+        // console.log(zipCode);
 
         var url;
 
-        const apiKey = "3f56d66bf44e9bbf90cbf9c5a0db23a5";
-        let zipCode = 21218;
+        var apiKey = "3f56d66bf44e9bbf90cbf9c5a0db23a5";
+        // let zipCode = 21218;
 
         let weather;
 
@@ -11,19 +16,25 @@
         let yPos, yPos2, yPos3, yPos4, yPos5;
         const orbSize = 1000;
 
-        let h;
-        let s;
+        let h = 0;
+        let s = 100;
 
     
         function setup() {
-            canvas = createCanvas(windowWidth, windowHeight);
+
+            var button = select('#submit');
+            button.mousePressed(updateJSON);
+
+            input = select('#text-box');
+            console.log(input.value());
+
+            canvas = createCanvas(windowWidth, windowHeight*2);
             canvas.position(0, 0);
             canvas.style('z-index', '-2');
             colorMode(HSB);
             noStroke();
   
-            url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode +",us&appid=" + apiKey + "&units=metric";
-            loadJSON(url, gotData);
+            // loadJSON(url, gotData);
 
             xPos = random(0, windowWidth);
         	yPos = random(0, windowHeight);
@@ -53,10 +64,14 @@
             console.log("resized");       
         }
 
+        function updateJSON() {
+            url = "http://api.openweathermap.org/data/2.5/weather?zip=" + input.value() +",us&appid=" + apiKey + "&units=metric"; 
+            loadJSON(url, gotData);
+            console.log(input);
+        }
+
 
         function draw() {
-            // background(h+5, s, 100);
-
 
     //ORBS           
             fill(h, s, 100);
@@ -84,7 +99,7 @@
 
     //TYING DATA TO HUE AND SATURATION
 
-                h = map(temp, -10, 60, 0, 360);
+                h = map(temp, 10, 60, 0, 360);
                 s = map(humidity, 100, 0, 30, 90);
 
 
