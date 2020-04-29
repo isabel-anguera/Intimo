@@ -3,7 +3,7 @@
         var url;
 
         const apiKey = "3f56d66bf44e9bbf90cbf9c5a0db23a5";
-        let zipCode = 90001;
+        let zipCode = 21218;
 
         let weather;
 
@@ -18,27 +18,27 @@
         function setup() {
             canvas = createCanvas(windowWidth, windowHeight);
             canvas.position(0, 0);
-            canvas.style('z-index', '-1');
+            canvas.style('z-index', '-2');
             colorMode(HSB);
             noStroke();
   
             url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode +",us&appid=" + apiKey + "&units=metric";
             loadJSON(url, gotData);
 
-            xPos = random(250, windowWidth-250);
-        	yPos = random(250, windowHeight-250);
+            xPos = random(0, windowWidth);
+        	yPos = random(0, windowHeight);
 
-        	xPos2 = random(250, windowWidth-250);
-        	yPos2 = random(250, windowHeight-250);
+        	xPos2 = random(0, windowWidth);
+        	yPos2 = random(0, windowHeight);
 
-        	xPos3 = random(250, windowWidth-250);
-        	yPos3 = random(250, windowHeight-250);
+        	xPos3 = random(0, windowWidth);
+        	yPos3 = random(0, windowHeight);
 
-        	xPos4 = random(250, windowWidth-250);
-        	yPos4 = random(250, windowHeight-250);
+        	xPos4 = random(0, windowWidth);
+        	yPos4 = random(0, windowHeight);
 
-        	xPos5 = random(250, windowWidth-250);
-        	yPos5 = random(250, windowHeight-250);
+        	xPos5 = random(0, windowWidth);
+        	yPos5 = random(0, windowHeight);
 
 
         }
@@ -46,6 +46,11 @@
         function gotData(data) {
 
             weather = data;
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+            console.log("resized");       
         }
 
 
@@ -73,7 +78,7 @@
 
             if(weather) { 
 
-            	let speed = weather.wind.speed/5;
+            	let speed = weather.wind.speed;
                 let temp = weather.main.temp;
                 let humidity = weather.main.humidity;
 
