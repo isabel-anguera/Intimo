@@ -21,7 +21,7 @@ h1 {
 	font-size: 78px;
 	margin-top: 5%;
 	/*margin-bottom: 2%;*/
-	text-align: center;
+	margin-left: 40%;
 	font-family: "GT-Sectra-Fine-Trial-Regular";
 	/*border: 2px dashed black;*/
 }
@@ -75,14 +75,26 @@ button:hover {
 #recordMessage {
 	border: 2px dashed black;
 	max-width: 20%;
-	padding: 2% 4%;
+	padding: 1% 4%;
 	margin: 2% 0 -11% 2%;
-	border-radius: 20px;
-}
-
-#recordButton {
+	/*border-radius: 20px;*/
+	float: left;
 
 }
+
+#recordingStatus {
+	text-align: center;
+}
+
+#startRecordButton {
+	text-align: center;
+	margin-left: 40%;
+}
+
+#startRecordSection {
+	text-align: center;
+}
+
 
 #title {
 	font-size: 68px;
@@ -116,7 +128,7 @@ button:hover {
 	background-color: #00000020;
 	border: 1px solid grey;
 	padding: 1.5%;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 #submit {
@@ -124,7 +136,7 @@ button:hover {
 	background-color: #00000020;
 	border: 1px solid grey;
 	padding: 1.5%;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 	margin-left: .5%;
 }
 
@@ -151,7 +163,7 @@ button:hover {
 }
 
 #archive-file {
-	padding: 10%;
+	padding: 12%;
 	border-right: solid black 2px;
 	margin: 0;
 	text-align: left;
@@ -166,7 +178,7 @@ button:hover {
 #blur {
 	position: absolute;
 	width: 100%;
-	height: 1500px;
+	height: 1700px;
 	margin-top: -5%;
 	z-index: -1;
 	backdrop-filter: blur(40px);
@@ -176,7 +188,7 @@ button:hover {
 
 #aboutParagraph {
 	max-width: 70%;
-	margin: 10% auto;
+	margin: 8% auto;
 
 }
 

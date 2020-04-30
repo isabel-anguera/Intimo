@@ -4,23 +4,27 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 	<title>Intimo</title>
 </head>
-<body style = "overflow: hidden">
+<body style = "background-image: url('Assets/Imgs/bg-StandIn.png')">
     
-	<div id = "blur"></div>
+	<!-- <div id = "blur"></div> -->
 
 <!-- Heading -->
     
     <div id = "heading">
 
-          <div id = "recordMessage">
-            <button id = "recordButton">Deliver a Message</button>
+         <div id = "recordMessage">
+            <button id = "recordButton"><a style = "font-size: 1em" href = "index.html">+ Deliver a Message</a></button>
+            <!-- <p id = "recordingStatus"> Click to start recording</p> -->
+            <!-- <div id = "recordButtonDiv"><button id = "startRecordButton" onclick = "startRecording()"><img src = "Assets/Imgs/record-symbol.png"></button></div> -->
+            <!-- <button id = "pauseRecordButton"> ⎮⎮ </button> -->
           </div>
 
           <h1><a id = "title" href = "index.html">Intimo</a></h1>
 
           <div id = "liveStreamControls">
             <button id = "startButton" onclick = "startAudio()"> Start Radio </button>
-            <button id = "muteButton" onclick = "muteAudio()"> Sound On/Off </button>
+            <button id = "muteButton" onclick = "muteAudio()">Sound On</button>
+            <button id = "unMuteButton" onclick = "unMuteAudio()"> <strike>Sound On</strike></button>
           </div>
       </div>
 

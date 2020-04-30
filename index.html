@@ -11,12 +11,16 @@
   <div id = "blur"></div>
 
 <!-- Heading -->
+
 <div id = "landingPageSection">
 
     <div id = "heading">
 
           <div id = "recordMessage">
-            <button id = "recordButton">Deliver a Message ⏎</button>
+            <button id = "recordButton" onclick = "expand()">+ Deliver a Message </button>
+            <p id = "recordingStatus"> Click to start recording</p>
+            <div id = "recordButtonDiv"><button id = "startRecordButton" onclick = "startRecording()"><img src = "Assets/Imgs/record-symbol.png"></button></div>
+            <!-- <button id = "pauseRecordButton"> ⎮⎮ </button> -->
           </div>
 
           <h1>Intimo</h1>
@@ -36,10 +40,9 @@
 
 
 <!-- ZIPCODE INPUT -->
-  
 
    <div id = "zipcodeSearchBox">
-    <input id = "text-box" type='text' value="12345"></input>
+    <input id = "text-box" type='text' value="Enter a zipcode"></input>
     <button id = "submit">Go</button> 
   </div>
 
@@ -57,7 +60,6 @@
     
 <div id = "ArchiveSection">  
 
-      <!-- <hr id = "top-bar"> -->
 
       <div id = "archive">
         <div id="archive-file">
