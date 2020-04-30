@@ -1,31 +1,56 @@
 @font-face {
-  font-family: "GT-Sectra";
-  src: url("Assets/GT-Sectra-Regular.woff2");
-
-  font-family: "GT-America";
-  src: url("Assets/GT-America-Standard-Regular.woff2");
+  font-family: "GT-Sectra-Fine-Trial-Regular";
+  src: url('GT-Sectra-Fine-Trial-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
 }
+
 html {
 	color: black;
+	scroll-behavior: smooth;
 }
 
 body {
-	font-family: "GT-America";
+	font-family: "Arial";
 	background: rgba(255);
-	text-align: center;
 	color: black;
+	margin: 0;
 }
 
 h1 {
-	font-size: 68px;
-	margin-top: 1%;
-	margin-bottom: 2%;
+	font-size: 78px;
+	margin-top: 5%;
+	/*margin-bottom: 2%;*/
 	text-align: center;
-	font-family: "GT-Sectra";
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	/*border: 2px dashed black;*/
+}
+
+h4 {
+	margin: 0;
+	font-size: 28px;
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+}
+
+h5 {
+	font-size: 18px;
+	margin: 2%;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 1.5em;
+	text-align: center;
+	font-family: "Arial"
+}
+
+a:hover {
+	filter: blur(2px);
 }
 
 button {
-	font-size: 32px;
+	font-size: 24px;
 	background-color: #ffffff00;
 	border: none;
 	margin-top: 0;
@@ -33,32 +58,91 @@ button {
 	color: black;
 }
 
-h2 {
-	font-family: "GT-Sectra";
-	font-size: 42px;
-	margin-bottom: 0;
-	margin-left: 10%;
+button:hover {
+	filter: blur(2px);
+}
+
+#landingPageSection {
+}
+
+#heading {
+	/*display:inline;*/
+	/*border: 2px dashed black;*/
+	/*display:flex;*/
+	/*margin-bottom: 0;*/
+}
+
+#recordMessage {
+	border: 2px dashed black;
+	max-width: 20%;
+	padding: 2% 4%;
+	margin: 2% 0 -11% 2%;
+	border-radius: 20px;
+}
+
+#recordButton {
+
+}
+
+#title {
+	font-size: 68px;
+	/*margin-top: 2%;*/
+	/*margin-bottom: 2%;*/
+	text-align: center;
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	/*border: 2px dashed black;*/
+}
+
+
+#liveStreamControls {
+	text-align: right;
+	max-width: 20%;
+	padding: .5%;
+	margin-right: 2%;
+	margin-top: -9%;
+	float: right;
+	/*border: 2px dashed black;*/
+	/*margin-right: 2%;*/
+/*	margin-top: -7%;*/
+}
+
+#zipcodeSearchBox {
+	text-align: center;
+	margin: 16% 0 22%;
+}
+
+#text-box {
+	font-size: 1em;
+	background-color: #00000020;
+	border: 1px solid grey;
+	padding: 1.5%;
+	border-radius: 10px;
+}
+
+#submit {
+	font-size: 1em;
+	background-color: #00000020;
+	border: 1px solid grey;
+	padding: 1.5%;
+	border-radius: 10px;
+	margin-left: .5%;
+}
+
+#lowerNavBar {
+	display:inline;
+	text-align: center;
+}
+
+#archiveSection {
 	margin-top: 5%;
-	text-align: left;
 }
 
-h4 {
-	margin: 0;
-	font-size: 28px;
-	font-family: "GT-Sectra";
+#archive {
+	margin: 10% 10% 5% 10%;
+	padding-top: 4%;
+	display: grid;
+  	grid-template-columns: auto auto auto;
 }
-
-h5 {
-
-	font-size: 18px;
-	margin: 2%;
-}
-
-a {
-
-	text-decoration: none;
-}
-
 
 #top-bar {
 	width: 80%;
@@ -66,33 +150,11 @@ a {
 	border-color: black;
 }
 
-button:hover {
-	background-color: white;
-}
-
-#archive {
-	margin: 5% 10% 5% 10%;
-	display: grid;
-  	grid-template-columns: auto auto auto;
-
-
-}
-
 #archive-file {
 	padding: 10%;
 	border-right: solid black 2px;
 	margin: 0;
 	text-align: left;
-
-}
-
-#liveStreamControls {
-	border: solid black 2px;
-	text-align: center;
-	max-width: 200px;
-	padding: .5%;
-	margin: auto auto;
-
 }
 
 #grid-id {
@@ -101,21 +163,36 @@ button:hover {
 	border-color: black;
 }
 
-#addButton {
-	margin: 1% 2% 0 95%;
-	color: black;
-}
-
-
 #blur {
 	position: absolute;
 	width: 100%;
-	height: 2000px;
+	height: 1500px;
+	margin-top: -5%;
 	z-index: -1;
 	backdrop-filter: blur(40px);
 }
 
+/*SPECIFIC TO ABOUT PAGE*/
 
+#aboutParagraph {
+	max-width: 70%;
+	margin: 10% auto;
+
+}
+
+h2 {
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	font-size: 36px;
+	margin-bottom: 0;
+	margin-top: 5%;
+	text-align: left;
+}
+
+p {
+	text-align: justify;
+	line-height: 1.6;
+	margin-bottom: 10%;
+}
 
 
 

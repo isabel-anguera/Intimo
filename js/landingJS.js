@@ -1,3 +1,11 @@
+
+var liveStreamMute = document.getElementById("muteButton");
+var liveStreamStart = document.getElementById("startButton");
+var liveStreamUnMute = document.getElementById("unMuteButton");
+liveStreamMute.style.display = "none";
+liveStreamUnMute.style.display = "none";
+// var strikedText = "Sound On";
+
 const liveStream = document.getElementById('player');
         liveStream.muted = false;
 
@@ -10,15 +18,28 @@ const liveStream = document.getElementById('player');
         let file7 = document.getElementById("file7");
         let file8 = document.getElementById("file8");
 
-
+        function startAudio() {
+          // userStartAudio();
+          liveStreamMute.style.display = "block";
+          liveStreamStart.style.display = "none";
+          liveStreamUnMute.style.display = "none";
+          console.log("audioStarted");
+        }
 
         function muteAudio() {
-          liveStream.muted = true;
-          console.log("muted");
+            liveStreamUnMute.style.display = "block";
+            liveStreamStart.style.display = "none";
+            liveStreamMute.style.display = "none";
+            liveStream.muted = true;
+            console.log("muted");
         } 
 
         function unMuteAudio() {
+          liveStreamUnMute.style.display = "none";
+          liveStreamStart.style.display = "none";
+          liveStreamMute.style.display = "block";
           liveStream.muted = false;
+          console.log("unmuted");
         }
 
         function playFile1() {

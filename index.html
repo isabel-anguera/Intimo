@@ -5,27 +5,59 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <div id = "blur"></div>
 
-    <button id = "addButton"><a href = "bgTest.html">✚</a></button>
+<!-- BACKGROUND BLUR EFFECT -->
 
-    <input id = "text-box" type='text' value="21218"></input>
-    <button id = "submit">Search</button>
+  <div id = "blur"></div>
 
-    <h1> Intimo Radio </h1>
+<!-- Heading -->
+<div id = "landingPageSection">
 
-    <div id = "liveStreamControls">
-      <button id = "startButton" onclick = "userStartAudio()"> ▷ </button>
-      <button id = "muteButton" onclick = "muteAudio()"> ○ </button>
-      <button id = "unMuteButton" onclick = "unMuteAudio()"> ◎ </button>
+    <div id = "heading">
+
+          <div id = "recordMessage">
+            <button id = "recordButton">Deliver a Message ⏎</button>
+          </div>
+
+          <h1>Intimo</h1>
+
+          <div id = "liveStreamControls">
+            <button id = "startButton" onclick = "startAudio()"> Start Radio </button>
+            <button id = "muteButton" onclick = "muteAudio()">Sound On</button>
+            <button id = "unMuteButton" onclick = "unMuteAudio()"> <strike>Sound On</strike></button>
+          </div>
+
     </div>
+
+
+<!-- LIVESTREAM SOURCE -->
 
     <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload></audio>
 
 
-      <h2>Archive</h2>
+<!-- ZIPCODE INPUT -->
+  
 
-      <hr id = "top-bar">
+   <div id = "zipcodeSearchBox">
+    <input id = "text-box" type='text' value="12345"></input>
+    <button id = "submit">Go</button> 
+  </div>
+
+
+<!-- LOWER NAV BAR -->
+
+  <div id = "lowerNavBar">
+    <a href = "#ArchiveSection" style = "margin-right: 20%; margin-left: 2%">Archive</a>
+    <a href = "About.html" style = "margin: 0 15%; ">About</a>
+    <a href = "instructions.html" style = "margin-left:20%">Instructions</a>
+  </div>
+
+
+<!-- ARCHIVE -->
+    
+<div id = "ArchiveSection">  
+
+      <!-- <hr id = "top-bar"> -->
 
       <div id = "archive">
         <div id="archive-file">
@@ -108,13 +140,12 @@
           <audio src = "Assets/Toast_1.mp3" id = "file8" preload>
         </div>
       </div>
-
-
-
+    </div>
 
 
     <!-- <script src="js/sketch2.js"></script> -->
-    <script src = "js/newBGSketch.js"></script>
+    <!-- <script src = "js/newBGSketch.js"></script> -->
+    <script src = "js/landingJS.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
   </body>
