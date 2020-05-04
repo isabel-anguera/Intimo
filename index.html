@@ -211,7 +211,7 @@
         }
 
         function updateJSON() {
-            url = "http://api.openweathermap.org/data/2.5/weather?zip=" + input.value() +",us&appid=" + apiKey + "&units=metric"; 
+            url = "https://api.openweathermap.org/data/2.5/weather?zip=" + input.value() +",us&appid=" + apiKey + "&units=metric"; 
             loadJSON(url, gotData);
             console.log(input);
         }
