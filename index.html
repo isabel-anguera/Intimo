@@ -211,7 +211,7 @@
         }
 
         function updateJSON() {
-            url = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?zip=" + input.value() +",us&appid=" + apiKey + "&units=metric"; 
+            url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=" + input.value() +",us&appid=" + apiKey + "&units=metric"; 
             loadJSON(url, gotData);
             console.log(input);
         }
